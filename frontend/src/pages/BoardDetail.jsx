@@ -16,11 +16,13 @@ const BoardDetail = () => {
   const [editingTodo, setEditingTodo] = useState(null)
   const [filter, setFilter] = useState('all') 
 
+ 
   useEffect(() => {
     fetchBoard()
     fetchTodos()
   }, [id])
 
+ 
   const fetchBoard = async () => {
     try {
       const response = await boardService.getById(id)
@@ -30,6 +32,7 @@ const BoardDetail = () => {
       navigate('/dashboard')
     }
   }
+
 
   const fetchTodos = async () => {
     try {
@@ -47,6 +50,7 @@ const BoardDetail = () => {
     setEditingTodo(null)
     setIsModalOpen(true)
   }
+
 
   const handleEditTodo = (todo) => {
     setEditingTodo(todo)
@@ -69,6 +73,7 @@ const BoardDetail = () => {
     }
   }
 
+
   const handleDeleteTodo = async (todoId) => {
     try {
       await todoService.delete(todoId)
@@ -79,6 +84,7 @@ const BoardDetail = () => {
     }
   }
 
+  
   const handleStatusChange = async (todoId, newStatus) => {
     try {
       await todoService.update(todoId, { status: newStatus })
