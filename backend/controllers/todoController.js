@@ -178,11 +178,4 @@ const updateTodoOrder = async (req, res) => {
   }
 };
 
-module.exports = {
-  getTodos,
-  getTodo,
-  createTodo,
-  updateTodo,
-  deleteTodo,
-  updateTodoOrder
-};
+module.exports = { getTodos,getTodo,createTodo,updateTodo,deleteTodo,updateTodoOrder};
