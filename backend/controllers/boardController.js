@@ -66,6 +66,7 @@ const createBoard = async (req, res) => {
 // @desc    Update a board
 // @route   PUT /api/boards/:id
 // @access  Private
+
 const updateBoard = async (req, res) => {
   try {
     const errors = validationResult(req);
@@ -99,6 +100,7 @@ const updateBoard = async (req, res) => {
 // @desc    Delete a board
 // @route   DELETE /api/boards/:id
 // @access  Private
+
 const deleteBoard = async (req, res) => {
   try {
     const board = await Board.findOne({
@@ -123,10 +125,4 @@ const deleteBoard = async (req, res) => {
   }
 };
 
-module.exports = {
-  getBoards,
-  getBoard,
-  createBoard,
-  updateBoard,
-  deleteBoard
-};
+module.exports = { getBoards,getBoard,createBoard, updateBoard,deleteBoard};
