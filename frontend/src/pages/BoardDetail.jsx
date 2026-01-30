@@ -14,7 +14,7 @@ const BoardDetail = () => {
   const [loading, setLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [editingTodo, setEditingTodo] = useState(null)
-  const [filter, setFilter] = useState('all') // all, pending, in-progress, completed
+  const [filter, setFilter] = useState('all') 
 
   useEffect(() => {
     fetchBoard()

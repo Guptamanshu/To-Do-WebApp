@@ -80,7 +80,9 @@ const Register = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm font-semibold text-gray-800">Email</label>
+            <label htmlFor="email" className="text-sm font-semibold text-gray-800">
+              Email
+              </label>
             <input
               type="email"
               id="email"
