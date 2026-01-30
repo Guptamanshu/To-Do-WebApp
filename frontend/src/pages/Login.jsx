@@ -44,7 +44,6 @@ const Login = () => {
           <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
           <p className="text-gray-500 text-sm">Sign in to your account to continue</p>
         </div>
-
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           {error && (
             <div className="bg-red-100 text-red-700 p-3 rounded-lg text-sm border border-red-300">
