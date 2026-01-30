@@ -16,8 +16,7 @@ const TodoItem = ({ todo, onEdit, onDelete, onStatusChange }) => {
         return '#718096'
     }
   }
-
-  const getStatusColor = (status) => {
+    const getStatusColor = (status) => {
     switch (status) {
       case 'completed':
         return '#10B981'
