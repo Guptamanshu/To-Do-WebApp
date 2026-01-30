@@ -22,16 +22,19 @@ export const AuthProvider = ({ children }) => {
     if (token && storedUser) {
       setUser(JSON.parse(storedUser))
       // Verify token is still valid
+
       api.get('/auth/me')
         .then((response) => {
           setUser(response.data)
           localStorage.setItem('user', JSON.stringify(response.data))
         })
+
         .catch(() => {
           localStorage.removeItem('token')
           localStorage.removeItem('user')
           setUser(null)
         })
+        
         .finally(() => setLoading(false))
     } else {
       setLoading(false)
