@@ -7,10 +7,7 @@ const BoardModal = ({ isOpen, onClose, onSave, board = null }) => {
   const [color, setColor] = useState('#3B82F6')
   const [error, setError] = useState('')
 
-  const colors = [
-    '#3B82F6', '#10B981', '#F59E0B', '#EF4444',
-    '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'
-  ]
+  const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444','#8B5CF6', '#EC4899', '#06B6D4', '#84CC16']
 
   useEffect(() => {
     if (board) {
